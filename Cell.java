@@ -1,8 +1,7 @@
-package model;
-
 import javax.swing.*;
+import java.io.Serializable;
 
-public class Cell {
+public class Cell implements Serializable {
 
     static String imgPath;
 

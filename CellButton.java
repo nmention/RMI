@@ -1,7 +1,3 @@
-package vue;
-
-import model.Cell;
-
 import javax.swing.*;
 
 public class CellButton extends JButton {

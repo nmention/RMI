@@ -1,7 +1,3 @@
-package app;
-
-import vue.Vue;
-
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 

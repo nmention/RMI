@@ -1,11 +1,3 @@
-package app;
-
-import controller.CellListener;
-import model.Grid;
-import model.Player;
-import model.Sign;
-import vue.Vue;
-
 import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.UnknownHostException;
@@ -16,13 +8,16 @@ public class Server {
   String hostname;
   Vue vue;
 
+  Client client;
+
   Game game;
 
 
 
 
     public Server() throws RemoteException {
-       hostname = "";
+      client = new Client();
+      hostname = "";
 
       try {
         hostname = InetAddress.getLocalHost().getHostName();

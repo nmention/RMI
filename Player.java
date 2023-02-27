@@ -1,14 +1,14 @@
-package model;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.Serializable;
 
-public class Player {
+public class Player implements Serializable {
     Sign sign;
+    State state;
 
     String name;
 
@@ -37,6 +37,7 @@ public class Player {
         } else if (sign == Sign.CIRCLE) {
             signMarked = refitIcon(createIcon("circle.png"),150,200);
         }
+        state = State.WAITING;
         won = false;
 
 
@@ -65,4 +66,13 @@ public class Player {
     }
 
 
+  @Override
+  public String toString() {
+    return "Player{" +
+      "sign=" + sign +
+      ", name='" + name + '\'' +
+      ", signMarked=" + signMarked +
+      ", won=" + won +
+      '}';
+  }
 }
